@@ -1,0 +1,17 @@
+package mycodes;
+
+import java.util.Scanner;
+
+public class LastDigitCheck {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter any two non-negative integers: ");
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		boolean c=(a==b%10)?true:false;
+		System.out.print(c);
+
+	}
+
+}
