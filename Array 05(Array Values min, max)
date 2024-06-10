@@ -1,0 +1,37 @@
+import java.util.*;
+class ArrayTwoValues{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter array size: ");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            System.out.print("enter element "+(i+1)+" : ");
+            a[i]=sc.nextInt();
+        }
+        System.out.print("enter the number that to print largest numbers: ");
+        int larg=sc.nextInt();
+        System.out.print("enter the number that to print smallest numbers: ");
+        int small=sc.nextInt();
+        int temp=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<i;j++){
+                if(a[i]<a[j]){
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.print("smallest: ");
+        for(int i=0;i<small;i++){
+            System.out.print(a[i]+" ");
+        }
+        int count=0;
+        System.out.println("largest: ");
+        for(int i=n-1;count<larg;i--){
+            System.out.print(a[i]+" ");
+            count++;
+        }
+    }
+}
